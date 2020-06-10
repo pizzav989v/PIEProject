@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.LoginController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.LogoutController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/LogoutController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AngajatController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.AngajatController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AngajatController</servlet-name>
+        <url-pattern>/AngajatController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AngajatSearchController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.AngajatSearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AngajatSearchController</servlet-name>
+        <url-pattern>/AngajatSearchController</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+		<servlet-name>ClientController</servlet-name>
+		<servlet-class>com.gestiunemagazin.controller.ClientController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientController</servlet-name>
+		<url-pattern>/ClientController</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ClientSearchController</servlet-name>
+		<servlet-class>com.gestiunemagazin.controller.ClientSearchController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientSearchController</servlet-name>
+		<url-pattern>/ClientSearchController</url-pattern>
+	</servlet-mapping>
+
+    <servlet>
+        <servlet-name>SejurController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.SejurController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SejurController</servlet-name>
+        <url-pattern>/SejurController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SejurSearchController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.SejurSearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SejurSearchController</servlet-name>
+        <url-pattern>/SejurSearchController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FacturaController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.FacturaController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FacturaController</servlet-name>
+        <url-pattern>/FacturaController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FacturaSearchController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.FacturaSearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FacturaSearchController</servlet-name>
+        <url-pattern>/FacturaSearchController</url-pattern>
+    </servlet-mapping>    
+    
+    <servlet>
+        <servlet-name>DepartamentController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.DepartamentController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartamentController</servlet-name>
+        <url-pattern>/DepartamentController</url-pattern>
+    </servlet-mapping>    
+   
+    <servlet>
+        <servlet-name>ProdusController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.ProdusController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProdusController</servlet-name>
+        <url-pattern>/ProdusController</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>ProdusSearchController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.ProdusSearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProdusSearchController</servlet-name>
+        <url-pattern>/ProdusSearchController</url-pattern>
+    </servlet-mapping>   
+    
+    <servlet>
+        <servlet-name>UtilizatorController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.UtilizatorController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UtilizatorController</servlet-name>
+        <url-pattern>/UtilizatorController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>UtilizatorSearchController</servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.UtilizatorSearchController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UtilizatorSearchController</servlet-name>
+        <url-pattern>/UtilizatorSearchController</url-pattern>
+    </servlet-mapping>   
+    
+    <servlet>
+        <servlet-name>InregistrareController 
+        </servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.InregistrareController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InregistrareController</servlet-name>
+        <url-pattern>/InregistrareController</url-pattern>
+    </servlet-mapping> 
+ 
+    <servlet>
+        <servlet-name>RecuperareController 
+        </servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.RecuperareController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecuperareController</servlet-name>
+        <url-pattern>/RecuperareController</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>RaportController 
+        </servlet-name>
+        <servlet-class>com.gestiunemagazin.controller.RaportController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RaportController</servlet-name>
+        <url-pattern>/RaportController</url-pattern>
+    </servlet-mapping> 
+    
+    <session-config>
+        <session-timeout>
+            60
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
