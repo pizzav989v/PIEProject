@@ -1,0 +1,94 @@
+CREATE TABLE IF NOT EXISTS `gestiune_magazin`.`utilizator` (
+  `id_utilizator` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
+  `parola` VARCHAR(45) NULL DEFAULT NULL,
+  `tip_utilizator` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`id_utilizator`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci ;
+
+CREATE TABLE IF NOT EXISTS `gestiune_magazin`.`departament` (
+  `id_departament` INT NOT NULL AUTO_INCREMENT,
+  `nume_dept` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_departament`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `gestiune_magazin`.`angajat` (
+  `id_angajat` INT NOT NULL AUTO_INCREMENT,
+  `nume` VARCHAR(45) NULL DEFAULT NULL,
+  `prenume` VARCHAR(45) NULL DEFAULT NULL,
+  `cnp` VARCHAR(45) NULL DEFAULT NULL,
+  `telefon` VARCHAR(45) NULL DEFAULT NULL,
+  `salariu` FLOAT NULL DEFAULT NULL,
+  `data_angajarii` DATE NULL DEFAULT NULL,
+  `functie` VARCHAR(45) NULL DEFAULT NULL,
+  `id_departament` INT NULL DEFAULT NULL,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_angajat`),
+  INDEX `id_departament_idx` (`id_departament` ASC) VISIBLE,
+  CONSTRAINT `id_departament`
+    FOREIGN KEY (`id_departament`)
+    REFERENCES `gestiune_magazin`.`departament` (`id_departament`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+
+CREATE TABLE IF NOT EXISTS `gestiune_magazin`.`factura` (
+  `id_factura` INT NOT NULL AUTO_INCREMENT,
+  `valoare` DOUBLE NULL DEFAULT NULL,
+  `id_angajat` INT NULL DEFAULT NULL,
+  `id_client` INT NULL DEFAULT NULL,
+  `data` DATE NULL DEFAULT NULL,
+  PRIMARY KEY (`id_factura`),
+  INDEX `id_angajat_idx` (`id_angajat` ASC) VISIBLE,
+  INDEX `id_client_idx` (`id_client` ASC) VISIBLE,
+  CONSTRAINT `id_angajat`
+    FOREIGN KEY (`id_angajat`)
+    REFERENCES `gestiune_magazin`.`angajat` (`id_angajat`),
+  CONSTRAINT `id_client`
+    FOREIGN KEY (`id_client`)
+    REFERENCES `gestiune_magazin`.`client` (`id_client`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+
+CREATE TABLE IF NOT EXISTS `gestiune_magazin`.`produs` (
+  `id_produs` INT NOT NULL AUTO_INCREMENT,
+  `denumire` VARCHAR(45) NULL DEFAULT NULL,
+  `pret` DOUBLE NULL DEFAULT NULL,
+  `stoc` INT NULL DEFAULT NULL,
+  `descriere` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_produs`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+
+CREATE TABLE IF NOT EXISTS `gestiune_magazin`.`client` (
+  `id_client` INT NOT NULL AUTO_INCREMENT,
+  `nume_cl` VARCHAR(45) NULL DEFAULT NULL,
+  `prenume_cl` VARCHAR(45) NULL DEFAULT NULL,
+  `cnp` VARCHAR(45) NULL DEFAULT NULL,
+  `adresa` VARCHAR(45) NULL DEFAULT NULL,
+  `telefon` VARCHAR(45) NULL DEFAULT NULL,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_client`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
